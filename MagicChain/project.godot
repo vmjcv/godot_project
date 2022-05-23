@@ -1,0 +1,81 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "ColorRect",
+"class": "Bead",
+"language": "GDScript",
+"path": "res://main/Bead.gd"
+}, {
+"base": "Reference",
+"class": "Element",
+"language": "GDScript",
+"path": "res://main/Element.gd"
+}, {
+"base": "ColorRect",
+"class": "Grid",
+"language": "GDScript",
+"path": "res://main/Grid.gd"
+}, {
+"base": "Reference",
+"class": "Magic",
+"language": "GDScript",
+"path": "res://main/Magic.gd"
+}, {
+"base": "Container",
+"class": "Plate",
+"language": "GDScript",
+"path": "res://main/Plate.gd"
+}, {
+"base": "Reference",
+"class": "SpecialFunc",
+"language": "GDScript",
+"path": "res://main/SpecialFunc.gd"
+}, {
+"base": "Reference",
+"class": "SpecialProperty",
+"language": "GDScript",
+"path": "res://main/SpecialProperty.gd"
+} ]
+_global_script_class_icons={
+"Bead": "",
+"Element": "",
+"Grid": "",
+"Magic": "",
+"Plate": "",
+"SpecialFunc": "",
+"SpecialProperty": ""
+}
+
+[application]
+
+config/name="MagicChain"
+config/icon="res://icon.png"
+
+[autoload]
+
+UGC="*res://addons/UGC/Utils/Main/UGC.tscn"
+Configs="*res://main/data/gdscript/configs.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/Todo_Manager/plugin.cfg", "res://addons/UGC/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
